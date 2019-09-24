@@ -1,0 +1,28 @@
+.footer {
+    width: 1320px;
+    height: 100px;
+    font-family: NanumSquare;
+    padding-top: 50px;
+    padding-left:200px;
+    padding-right: 300px;
+}
+
+.team, .info {
+    display: inline-block;
+    padding-right: 50px;
+}
+
+.team {
+    font-size: 18px;
+    line-height: 20px;
+    color: #6C6C6C;
+}
+
+.member, .info-item {
+    display: inline-block;
+    padding-right: 40px;
+}
+
+.info-item {
+    cursor: pointer;
+}
