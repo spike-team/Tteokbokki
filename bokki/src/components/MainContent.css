@@ -1,0 +1,52 @@
+* {
+    font-family: NanumSquare;
+}
+
+.banner {
+    height: 500px;
+    padding-left:300px;
+    padding-top: 195px;
+    background-color: rgba(60, 124, 240, 0.92);
+}
+.banner > p {
+    font-weight: 800;
+    font-size: 85px;
+    line-height: 96px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.banner > span {
+    font-size: 30px;
+    line-height: 45px;
+    color: #F7F8FA;
+}
+
+.first, .second {
+    height: 1000px;
+    padding-left:300px;
+    padding-right: 300px;
+    padding-top: 110px;
+    text-align: center;
+    border: 1px solid black;
+}
+.first > span {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+}
+.first > p, .second > p {
+    margin-top: 40px;
+    font-size: 23px;
+    line-height: 26px;
+    color: #626262;
+}
+#que {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 41px;
+    color: #000000;
+}
+.second {
+    height: 700px;
+    padding-top: 400px;
+}
