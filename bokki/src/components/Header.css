@@ -10,7 +10,7 @@
 .logo {
     display: inline-block;
     color: #2F5FD2;
-    padding-right: 450px;
+    margin-right: 450px;
     height: 43px;
     font-weight: 800;
     font-size: 40px;
@@ -24,7 +24,7 @@
 
 .menu-item {
     display: inline-block;
-    padding-left: 50px;
+    margin-left: 50px;
     font-size: 24px;
     line-height: 27px;
     text-align: center;
