@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import logo from '../assets/logo.png';
 
 const MenuItem = ({active, children, to}) => (
     <div className="menu-item">
@@ -10,7 +11,9 @@ const MenuItem = ({active, children, to}) => (
 const Header = () => {
     return (
         <div className="header">
-            <div className="logo">StudenTable</div>
+            <div className="logo">
+                <img src={logo} />StudenTable
+            </div>
             <div className="menu">
                 <MenuItem>오늘급식</MenuItem>
                 <MenuItem>시간표 확인</MenuItem>
