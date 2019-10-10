@@ -10,6 +10,7 @@ cache:
     - node_modules
 
 install:
+  - cd bokki
   - npm install
   - npm i -g react-deploy-cli
   - npm run build
