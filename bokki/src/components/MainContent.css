@@ -28,6 +28,7 @@
     padding-top: 110px;
     text-align: center;
     border: 1px solid black;
+    z-index:-1;
 }
 .first > span {
     font-weight: 300;
@@ -37,8 +38,10 @@
 .first > p, .second > p {
     margin-top: 40px;
     font-size: 23px;
-    line-height: 26px;
     color: #626262;
+}
+.second > p, .second > span, .second > #que {
+    color: #FFFFFF;
 }
 #que {
     font-weight: 800;
@@ -46,7 +49,38 @@
     line-height: 41px;
     color: #000000;
 }
+
+.first {
+    background-image: url('../assets/first-back.png');
+}
+
 .second {
+    background-image: url('../assets/second-back.png');
     height: 700px;
     padding-top: 400px;
+}
+
+#block {
+    margin-top: 120px;
+    text-align: left;
+    padding-left:300px;
+    padding-right: 250px;
+}
+
+#one,#two,#three,#four {
+    display: flex;
+    height: 130px;
+    margin-bottom: 30px;
+}
+
+.icon {
+    width: 87px;
+    height: 100px;
+    padding: 20px;
+}
+
+.dcp {
+    font-size: 24px;
+    padding-top: 50px;
+    padding-left: 40px;
 }
