@@ -10,7 +10,8 @@
 .logo {
     display: inline-block;
     color: #2F5FD2;
-    margin-right: 435px;
+    margin-right: 405px;
+    padding-right: 30px;
     height: 43px;
     font-weight: 800;
     font-size: 40px;

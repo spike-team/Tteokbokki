@@ -3,7 +3,7 @@
 }
 
 .register {
-    height: 600px;
+    height: 580px;
     background: #F7F8FA;
     padding-top: 170px;
     padding-left: 300px;
@@ -27,6 +27,9 @@
 #input {
     padding-left: 430px;
     padding-top: 40px;
+}
+input:focus{
+    outline: none;
 }
 
 input[type="email"] { 
@@ -58,4 +61,5 @@ input[type="submit"] {
     color: #FFFFFF;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: pointer;
 }
