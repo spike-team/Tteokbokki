@@ -10,7 +10,7 @@ const RegisterContent = () => {
 
             <div id="input">
                 <input type="text" name="school" placeholder="학교 이름"/>
-                <p>* 정확히 입력해주세요.</p>
+                <p>* 띄어쓰기 없이 정확히 입력해주세요.</p>
             </div>
             <div id="input">
                 <input type="email" name="email" placeholder="학교 이메일"/>
