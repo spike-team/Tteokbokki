@@ -1,8 +1,8 @@
 import React from 'react';
 import './Header.css';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 
-const MenuItem = ({active, children, to}) => (
+const MenuItem = ({children}) => (
     <div className="menu-item">
             {children}
     </div>
@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="logo">
-                <img src={logo} />StudenTable
+                <img alt="" src={logo} />StudenTable
             </div>
             <div className="menu">
                 <MenuItem>오늘급식</MenuItem>

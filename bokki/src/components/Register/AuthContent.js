@@ -1,9 +1,9 @@
 import React from 'react';
-import './RegisterContent.css';
+import './AuthContent.css';
 
-const RegisterContent = () => {
+const AuthContent = () => {
     return (
-        <div className="register">
+        <div className="auth">
             <p id="title">회원가입</p>
             <p>회원가입 기능은 선생님들께만 지원해드리는 기능입니다.<br />1학교 당 1계정으로 가입할 수 있습니다.</p>
 
@@ -16,4 +16,4 @@ const RegisterContent = () => {
     );
 };
 
-export default RegisterContent;
+export default AuthContent;
