@@ -21,7 +21,7 @@ const RegisterContent = () => {
                 <p>* 영어와 숫자를 혼합한 5글자 이상입니다.</p>
             </div>
             <div id="input">
-                <input type="password" name="password" minlength='5' placeholder="비밀번호 재입력"/>
+                <input type="password" name="password" minLength='5'maxLength='25' placeholder="비밀번호 재입력"/>
                 <div className="false">* 비밀번호와 일치하지 않습니다.</div>
                 <div className="true">* 비밀번호와 일치합니다.</div>
             </div>
