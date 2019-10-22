@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
-import RegisterContent from '../components/RegisterContent';
-import Footer from '../components/Footer';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import RegisterContent from '../components/Register/RegisterContent';
 
 const Register = () => {
     return (
