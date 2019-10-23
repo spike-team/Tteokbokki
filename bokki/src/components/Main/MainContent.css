@@ -50,11 +50,11 @@
 }
 
 .first {
-    background-image: url('../assets/first-back.png');
+    background-image: url('../../assets/first-back.png');
 }
 
 .second {
-    background-image: url('../assets/second-back.png');
+    background-image: url('../../assets/second-back.png');
     height: 700px;
     padding-top: 400px;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
-import AuthContent from '../components/AuthContent';
-import Footer from '../components/Footer';
+import Header from '../components/Header/Header';
+import AuthContent from '../components/Register/AuthContent';
+import Footer from '../components/Footer/Footer';
 
 const Auth = () => {
     return (
