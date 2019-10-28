@@ -64,7 +64,7 @@ input:focus{
     cursor: pointer;
 }
 
-a {
+.goauth {
     display: block;
     text-align: center;
     font-weight: bold;
