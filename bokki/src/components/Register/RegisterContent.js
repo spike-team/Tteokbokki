@@ -21,7 +21,7 @@ const RegisterContent = () => {
         setPassword(e.target.value);
     };
 
-    const onChangePasswordChk = (e) => {
+    const onChangePasswordChk = e => {
         setPasswordCheck(e.target.value);
         setPasswordError(e.target.value !== password);
     };
@@ -44,7 +44,7 @@ const RegisterContent = () => {
                 <p>* 띄어쓰기 없이 정확히 입력해주세요.</p>
             </div>
             <div className="register-input">
-                <input className="register-subinput" value={email} onChange={onChangeEmail}type="email" placeholder="학교 이메일" />
+                <input className="register-subinput" value={email} onChange={onChangeEmail} type="email" placeholder="학교 이메일" />
                 <p>* 이메일 형식을 맞춰서 적어주세요.</p>
             </div>
             <div className="register-input">
@@ -53,9 +53,9 @@ const RegisterContent = () => {
             </div>
             <div className="register-input">
                 <input className="register-subinput" value={passwordCheck} onChange={onChangePasswordChk} type="password" placeholder="비밀번호 재입력" />
-                {!{passwordError} && <div className="false" >* 비밀번호와 일치하지 않습니다.</div>}
+                {{passwordError} && <div className="false" >* 비밀번호와 일치하지 않습니다.</div>}
             </div>
-            <input className="register-submit" type="submit" name="send" value="회원가입" onClick={() => submitUserInfo(email, password)} />
+            <input className="register-submit" type="submit" name="send" value="회원가입" onClick={() => submitUserInfo(school, email, password)} />
         </div>
     );
 };

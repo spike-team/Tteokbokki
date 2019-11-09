@@ -73,7 +73,7 @@ input[type="password"]::placeholder {
 }
 
 .false {
-    /* visibility: hidden; */
+    visibility: hidden;
     position: relative;
     font-size: 15px;
     margin: 10px;
