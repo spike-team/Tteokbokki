@@ -1,23 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LoginContent.css';
 import { Link } from 'react-router-dom';
+import { signIn } from '../../services/post';
 
 const Login = () => {
+
+    const [email,setEmail] = useState('');
+    const [password,setPassword] = useState('');
+    
+    const onChangeEmail = e => {
+        setEmail(e.target.value);
+    }; 
+    const onChangePassword = e => {
+        setPassword(e.target.value);
+    };
+
+    const submitLoginInfo = (email, password) => {
+        try {
+            signIn(email, password);
+        } catch(error) {
+            console.log(error.response);
+        }
+    };
+
     return (
         <div className="login">
             <p className="login-title">학교 로그인</p>
             <p className="login-des">회원가입 기능은 선생님들께만 지원해드리는 기능입니다.<br />1학교 당 1계정으로 가입할 수 있습니다.</p>
 
             <div className="login-input">
-                <input className="login-subinput" type="email" name="email" placeholder="학교 이메일"/>
+                <input className="login-subinput" type="email" value={email} onChange={onChangeEmail} placeholder="학교 이메일"/>
                 <p>* 이메일 형식을 맞춰서 적어주세요.</p>
             </div>
             <div className="login-input">
-                <input className="login-subinput" type="password" name="password" minlength='5' placeholder="비밀번호"/>
+                <input className="login-subinput" type="password" value={password} onChange={onChangePassword} placeholder="비밀번호"/>
                 <p>* 영어와 숫자를 혼합한 5글자 이상입니다.</p>
             </div>
-            <input className="login-submit" type="submit" name="login" value="학교 로그인"/>
-            <a className="goauth"><Link to='./auth'>StudenTable 에 가입하지 않은 학교인가요?</Link></a>
+            <input className="login-submit" type="submit" onClick={() => submitLoginInfo(email, password)} value="학교 로그인"/>
+            <a className="goauth"><Link to='./register'>StudenTable 에 가입하지 않은 학교인가요?</Link></a>
         </div>
     );
 };
