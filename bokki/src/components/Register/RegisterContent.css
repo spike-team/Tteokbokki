@@ -72,15 +72,13 @@ input[type="password"]::placeholder {
     cursor: pointer;
 }
 
-.false, .true {
-    display: none;
+.false {
+    /* visibility: hidden; */
     position: relative;
     font-size: 15px;
     margin: 10px;
 }
+
 .false {
     color: #B90223;
-}
-.true {
-    color: #02B935;
 }
