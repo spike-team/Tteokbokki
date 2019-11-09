@@ -1,0 +1,1 @@
+export const baseUrl = "http://studentable.jaehoon.kim/api/v1"
