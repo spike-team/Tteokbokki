@@ -1,0 +1,33 @@
+sudo: required
+dist: trusty
+language: node_js
+
+node_js:
+  - "stable"
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - cd bokki
+  - npm install
+  - npm i -g react-deploy-cli
+  - npm run build
+
+deploy:
+  - skip_cleanup: true
+    provider: s3
+    access_key_id: "$S3_ACCESS_KEY_ID"
+    secret_access_key: "$S3_SECRET_ACCESS_KEY"
+    bucket: "S3 Bucket"
+    region: ap-northeast-2
+    on:
+      branch:
+        - master
+
+  - skip_cleanup: true
+    provider: script
+    script: npm test && npm build
+    on:
+      all_branches: true
