@@ -1,7 +1,3 @@
-* {
-    font-family: url('../../assets/NanumSquareR.ttf');
-}
-
 .timetable {
     display: flex;
     height: 600px;
