@@ -1,7 +1,10 @@
+* {
+    font-family: url('../../assets/NanumSquareR.ttf');
+}
+
 .footer {
     width: 1300px;
     height: 50px;
-    font-family: NanumSquare;
     padding-top: 50px;
     padding-bottom: 25px;
     padding-left:300px;

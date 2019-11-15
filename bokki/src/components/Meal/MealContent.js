@@ -16,7 +16,14 @@ const MealContent = ( {breakfast, lunch, dinner} ) => {
         }
     };
 
-    breakfast= [ "비피더스","우유"];
+    breakfast= [
+                "비피더스사과",
+                "흰밥(쌀밥)",
+                "실파계란국",
+                "삼겹살김치볶음",
+                "견과류파래돌김자반",
+                "깍두기"
+            ];
     
 
     return (
