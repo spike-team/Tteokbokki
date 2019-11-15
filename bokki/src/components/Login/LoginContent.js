@@ -37,7 +37,7 @@ const Login = () => {
                 <p>* 영어와 숫자를 혼합한 5글자 이상입니다.</p>
             </div>
             <input className="login-submit" type="submit" onClick={() => submitLoginInfo(email, password)} value="학교 로그인"/>
-            <a className="goauth"><Link to='./register'>StudenTable 에 가입하지 않은 학교인가요?</Link></a>
+            <a><Link to='./register' className="goauth">StudenTable 에 가입하지 않은 학교인가요?</Link></a>
         </div>
     );
 };
