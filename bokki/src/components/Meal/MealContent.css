@@ -1,10 +1,11 @@
 .meal {
-    height: 600px;
+    height: 650px;
     background: #F7F8FA;
     padding-top: 80px;
     padding-left: 300px;
     padding-right: 300px;
     padding-bottom: 50px;
+    text-align: center;
 }
 
 .meal-title {
@@ -22,7 +23,9 @@
 }
 
 .meal-content {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+    margin-top: 30px;
+    width: 60rem;
+    height: 23.875rem;
+    justify-content: space-between;
+    display: inline-block;
 }

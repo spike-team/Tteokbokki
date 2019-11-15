@@ -24,18 +24,17 @@ const MealContent = ( {breakfast, lunch, dinner} ) => {
                 "견과류파래돌김자반",
                 "깍두기"
             ];
-    
 
     return (
         <div className="meal">
             <p className="meal-title">오늘 급식</p>
-            <p className="meal-school">대덕소프트어쩌구</p>
+            <p className="meal-school">대덕소프트웨어마이스터고등학교</p>
             <div className="meal-content">
                 <MealCard time="아침" list={breakfast} />
                 <MealCard time="점심" list={lunch} />
                 <MealCard time="저녁" list={dinner} />
             </div>
-        </div>
+            </div>
     );
 };
 
