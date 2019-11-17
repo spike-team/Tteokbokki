@@ -2,19 +2,28 @@ import React, { useState } from 'react';
 
 import MealCard from './MealCard';
 import './MealContent.css'
-import axios from 'axios';
+import { getMeal } from '../../services/get';
 
-const MealContent = ( {breakfast, lunch, dinner} ) => {
+const MealContent = ( { breakfast, lunch, dinner} ) => {
 
-    const [meal, setMeal] = useState(null);
-    let showMeal = async () => {
+    // const [meal, setMeal] = useState(null);
+    // let showMeal = async () => {
+    //     try {
+    //         const respose = await axios.get();
+    //         setMeal(respose.date);
+    //     } catch (error) {
+    //         console.log (error);
+    //     }
+    // };
+
+    const setMeal = async (date, school_id ) => {
         try {
-            const respose = await axios.get();
-            setMeal(respose.date);
-        } catch (error) {
-            console.log (error);
+            getMeal(date, school_id);
+            console.log("success setMeal")
+        } catch(error) {
+            console.log(error.response);
         }
-    };
+    }
 
     breakfast= [
                 "비피더스사과",
@@ -28,7 +37,7 @@ const MealContent = ( {breakfast, lunch, dinner} ) => {
     return (
         <div className="meal">
             <p className="meal-title">오늘 급식</p>
-            <p className="meal-school">대덕소프트웨어마이스터고등학교</p>
+            <p className="meal-line"/>
             <div className="meal-content">
                 <MealCard time="아침" list={breakfast} />
                 <MealCard time="점심" list={lunch} />

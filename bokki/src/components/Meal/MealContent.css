@@ -1,5 +1,5 @@
 .meal {
-    height: 650px;
+    height: 600px;
     background: #F7F8FA;
     padding-top: 80px;
     padding-left: 300px;
@@ -16,10 +16,9 @@
     margin-bottom: 20px;
 }
 
-.meal-school {
-    font-size: 30px;
-    text-align: center;
-    color: #000000;
+.meal-line {
+    margin-top: 50px;
+    border: 1px solid black;
 }
 
 .meal-content {
