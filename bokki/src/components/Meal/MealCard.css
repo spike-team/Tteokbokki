@@ -1,0 +1,31 @@
+.meal-wrapper {
+    display: inline-block;
+    width: 13.7rem;
+    height: 19.75rem;
+}
+
+.meal-wrapper + .meal-wrapper {
+    margin-left: 120px;
+}
+
+.meal-time {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.meal-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom: 50%;
+    font-size: 1.3rem;
+}
+
+.meal-menu + .meal-menu {
+    margin-top: 20px;
+}
+
+.meal-temp {
+    transform: translate(0px, 70px);
+}

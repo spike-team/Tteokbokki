@@ -6,27 +6,29 @@ import { baseUrl } from "./endpoint";
 export const signUp = async (email, password, school) => {
     const response = await axios.post(
     `${baseUrl}/manager/signup`,{   
-        email: email, 
-        password: password,
-        schoolCode: school
+        "email": email, 
+        "password": password,
+        "schoolCode": school
     },{
         headers: {
             "content-type": "application/json"
         }
-    });
-    return response; 
+    })  
+    console.log("성공");
+    return response.data; 
 };
 
 // 로그인
 export const signIn = async (email, password) => {
     const response = await axios.post(
     `${baseUrl}/manager/auth`,{   
-        email: email, 
-        password: password
+        "email": email, 
+        "password": password
     },{
         headers: {
             "content-type": "application/json"
         }
-    });
-    return response; 
+    })
+    console.log("성공");
+    return response.data; 
 };

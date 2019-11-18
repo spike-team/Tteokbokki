@@ -35,7 +35,7 @@
     padding: 100px;
 }
 
-.timetable-down, .timetable-up { 
+.timetable-down { 
     position: relative;
     top: 100px;
     width: 500px;
@@ -43,12 +43,20 @@
     background: #FFFFFF;
     border: 1px solid #000000;
     font-size: 18px;
-    text-align: left;;
+    text-align: left;
     padding-left: 30px;
     cursor: pointer;
 }   
 .timetable-up {
+    position: relative;
     top: 140px;
+    width: 480px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 15px;
+    cursor: pointer;
 }
 
 .upload { 

@@ -6,10 +6,10 @@ const TimetableComponent = () => {
         <div className="timetable">
             <div className="side">
                 <p className="time-title">우리 반 시간표</p>
-                <p className="school">대덕소프트어쩌구</p>
+                <p className="school">대덕소프트웨어마이스터고등학교</p>
                 <p className="class">
-                    <span>학년</span>
-                    <span>반</span>
+                    <span>2학년</span>
+                    <span>1반</span>
                 </p>
             </div>
             <div className="table">
