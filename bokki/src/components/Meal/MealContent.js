@@ -4,44 +4,38 @@ import MealCard from './MealCard';
 import './MealContent.css'
 import { getMeal } from '../../services/get';
 
-const MealContent = ( { breakfast, lunch, dinner} ) => {
+const MealContent = ( ) => {
 
-    // const [meal, setMeal] = useState(null);
-    // let showMeal = async () => {
-    //     try {
-    //         const respose = await axios.get();
-    //         setMeal(respose.date);
-    //     } catch (error) {
-    //         console.log (error);
-    //     }
-    // };
+    let date = ()=> {
+        let d = new Date(),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+        return [year, month, day].join('-');
+    }
 
-    const setMeal = async (date, school_id ) => {
+    let schoolCode = sessionStorage.getItem();
+    
+    const setMeal = async (date, schoolCode ) => {
         try {
-            getMeal(date, school_id);
+            let {breakfast,lunch,dinner} = getMeal(date, schoolCode);
             console.log("success setMeal")
         } catch(error) {
             console.log(error.response);
         }
     }
-
-    breakfast= [
-                "비피더스사과",
-                "흰밥(쌀밥)",
-                "실파계란국",
-                "삼겹살김치볶음",
-                "견과류파래돌김자반",
-                "깍두기"
-            ];
-
     return (
         <div className="meal">
             <p className="meal-title">오늘 급식</p>
             <p className="meal-line"/>
             <div className="meal-content">
-                <MealCard time="아침" list={breakfast} />
-                <MealCard time="점심" list={lunch} />
-                <MealCard time="저녁" list={dinner} />
+                <MealCard time="아침" lisk={breakfast} />
+                <MealCard time="점심" lisk={lunch} />
+                <MealCard time="저녁" lisk={dinner} />
             </div>
             </div>
     );

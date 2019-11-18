@@ -15,9 +15,11 @@ const Login = () => {
         setPassword(e.target.value);
     };
 
-    const submitLoginInfo = (email, password) => {
+    const submitLoginInfo = async (email, password) => {
         try {
-            signIn(email, password);
+            let response = await signIn(email, password);
+            sessionStorage.setItem('access', response.data.access);
+            localStorage.setItem('refresh', response.data.refresh);
         } catch(error) {
             console.log(error.response);
         }
@@ -37,7 +39,7 @@ const Login = () => {
                 <p>* 영어와 숫자를 혼합한 5글자 이상입니다.</p>
             </div>
             <input className="login-submit" type="submit" onClick={() => submitLoginInfo(email, password)} value="학교 로그인"/>
-            <a><Link to='./register' className="goauth">StudenTable 에 가입하지 않은 학교인가요?</Link></a>
+            <Link to='./register' href="" className="goauth"><span>StudenTable 에 가입하지 않은 학교인가요?</span></Link>
         </div>
     );
 };

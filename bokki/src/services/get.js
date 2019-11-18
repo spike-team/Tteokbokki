@@ -2,9 +2,9 @@ import axios from "axios";
 
 import { baseUrl } from "./endpoint";
 
-export const getMeal = async (date, school_id) => {
-    const response = await axios.get(`${baseUrl}/meal?school_id=${school_id}&date=${date}`,{
-        params: { date, school_id },
+export const getMeal = async (date, schoolCode) => {
+    const response = await axios.get(`${baseUrl}/meal?schoolCode=${schoolCode}&date=${date}`,{
+        params: { date, schoolCode },
         headers: {
                 "content-type": "application/json"
         }
@@ -13,5 +13,4 @@ export const getMeal = async (date, school_id) => {
 };
 
 export const slk = ( ) => {
-
 }
