@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import MealCard from './MealCard';
 import './MealContent.css'
@@ -18,24 +18,28 @@ const MealContent = ( ) => {
         return [year, month, day].join('-');
     }
 
-    let schoolCode = sessionStorage.getItem();
-    
+    let schoolCode = sessionStorage.getItem("acess");
+
     const setMeal = async (date, schoolCode ) => {
         try {
-            let {breakfast,lunch,dinner} = getMeal(date, schoolCode);
-            console.log("success setMeal")
+            const meal = getMeal(date, schoolCode);
+            return {...meal, status: 200};
         } catch(error) {
             console.log(error.response);
+            return { status: error.response.status};
         }
     }
+
+    const { breakfast,lunch,dinner, status } = setMeal(date, schoolCode);
+
     return (
         <div className="meal">
             <p className="meal-title">오늘 급식</p>
             <p className="meal-line"/>
             <div className="meal-content">
-                <MealCard time="아침" lisk={breakfast} />
-                <MealCard time="점심" lisk={lunch} />
-                <MealCard time="저녁" lisk={dinner} />
+                <MealCard time="아침" list={breakfast} />
+                <MealCard time="점심" list={lunch} />
+                <MealCard time="저녁" list={dinner} />
             </div>
             </div>
     );
