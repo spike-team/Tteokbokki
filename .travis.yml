@@ -28,6 +28,6 @@ deploy:
 
   - skip_cleanup: true
     provider: script
-    script: npm test && npm build
+    script: npm build
     on:
       all_branches: true
