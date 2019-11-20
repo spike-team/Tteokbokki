@@ -18,9 +18,9 @@ const MealContent = ( ) => {
         return [year, month, day].join('-');
     }
 
-    let schoolCode = sessionStorage.getItem("acess");
+    let schoolCode = sessionStorage.getItem("access");
 
-    const setMeal = async (date, schoolCode ) => {
+    const setMeal = (date, schoolCode ) => {
         try {
             const meal = getMeal(date, schoolCode);
             return {...meal, status: 200};
