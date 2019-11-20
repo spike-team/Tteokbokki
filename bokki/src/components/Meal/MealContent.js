@@ -32,6 +32,14 @@ const MealContent = ( ) => {
 
     const { breakfast,lunch,dinner, status } = setMeal(date, schoolCode);
 
+    if(status === 200) {
+        console.log("급식 불러오기 성공");
+    } else if(status === 400) {
+        console.log("잘못된 형식의 학교 코드 혹은 날짜 형식");
+    } else if(status === 404) {
+        console.log("해당 정보를 찾을 수 없음");
+    }
+
     return (
         <div className="meal">
             <p className="meal-title">오늘 급식</p>
