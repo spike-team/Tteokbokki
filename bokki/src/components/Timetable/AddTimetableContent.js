@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './ManageTimetableContent.css';
+import './AddTimetableContent.css';
 
-const ManageTimetableContent = () => {
+const AddTimetableContent = () => {
     return (
         <div className="manage">
             <div className="manageside">
@@ -19,4 +19,4 @@ const ManageTimetableContent = () => {
     );
 };
 
-export default ManageTimetableContent;
+export default AddTimetableContent;
