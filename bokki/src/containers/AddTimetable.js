@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../components/Header/Header';
-import ManageTimetableContent from '../components/Timetable/ManageTimetableContent';
+import AddTimetableContent from '../components/Timetable/AddTimetableContent';
 import Footer from '../components/Footer/Footer';
 
-const ManageTimetable = () => {
+const AddTimetable = () => {
     return (
         <div>
             <Header/>
-            <ManageTimetableContent/>
+            <AddTimetableContent/>
             <Footer/>
         </div>
     );
 };
 
-export default ManageTimetable;
+export default AddTimetable;
