@@ -26,6 +26,7 @@ deploy:
     secret_access_key: "$S3_SECRET_ACCESS_KEY"
     bucket: "studentable.net"
     region: ap-northeast-2
+    local_dir: build
     on:
       branch:
         - master
