@@ -11,8 +11,11 @@ const AddTimetableContent = () => {
                 <p className="manage-des"> 기본 틀이 만들어져 있는 파일(.CSV)를 다운받아<br/>현재 학교 시간표를 입력하여 업로드, 등록해 주세요.</p>
             </div>
             <div className="file">
-                <input className="timetable-down" type="submit" value="StudentTable.csv                                                  다운"/>
-                <input className="timetable-up" type="file"/>
+                <input className="timetable-down" type="submit" value="StudenTable.csv 다운받기"/>
+                <div className="input-container">
+                    <input className="timetable-up" id="my-file" type="file"/>
+                    <label htmlFor="my-file" className="input-label">파일 업로드하기</label>
+                </div>
                 <input className="upload" type="submit" value="등록하기"/>
             </div>
         </div>
