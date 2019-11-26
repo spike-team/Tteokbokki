@@ -5,3 +5,4 @@ export { default as Meal } from './Meal';
 export { default as Timetable } from './Timetable';
 export { default as AddTimetable} from './AddTimetable';
 export { default as EmailAuthSuccess} from './EmailAuthSuccess';
+export { default as MakeTimetable } from './MakeTimetable';

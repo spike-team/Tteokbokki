@@ -1,0 +1,86 @@
+.manage {
+    display: flex;
+    height: 600px;
+    background: #F7F8FA;
+    padding-top: 80px;
+    padding-left: 250px;
+    padding-right: 300px;
+    padding-bottom: 50px;
+}
+
+.manageside {
+    padding: 100px;
+    width: 500px;
+}
+
+.manage-title {
+    width:500px;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 49px;
+    text-align: center;
+    margin-right: 800px;
+    margin-bottom: 20px;
+}
+
+.manage-des {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 50px;
+}
+
+.file {
+    padding: 100px;
+}
+
+.timetable-down { 
+    position: relative;
+    top: 100px;
+    width: 500px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    font-size: 18px;
+    text-align: left;
+    padding: 15px 30px ;
+    cursor: pointer;
+}   
+
+.input-file-container {
+    position: relative;
+    width: 500px;
+} 
+
+.timetable-up {
+    position: absolute;
+    top: 0; left: 0;
+    width: 225px;
+    opacity: 0;
+}
+
+.input-label {
+    position: relative;
+    top: 120px;
+    font-size: 18px;
+    display: block;
+    padding:13px 28px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.upload { 
+    position: relative;
+    left:150px;
+    top: 200px;
+    width: 183px;
+    height: 45px;
+    background: rgba(60, 124, 240, 0.92);
+    border: 1px solid rgba(60, 124, 240, 0.92);
+    border-radius: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}

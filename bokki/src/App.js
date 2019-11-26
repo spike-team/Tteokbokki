@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Main,Login,Register,Meal,Timetable,AddTimetable,EmailAuthSuccess } from './containers';
+import { Main,Login,Register,Meal,Timetable,AddTimetable,EmailAuthSuccess,MakeTimetable } from './containers';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <Route path='/timetable' component={Timetable} />
       <Route path='/addtimetable' component={AddTimetable} />
       <Route path='/emailauth' component={EmailAuthSuccess} />
+      <Route path='/maketimetable' component={MakeTimetable} />
     </BrowserRouter>
   );
 }
