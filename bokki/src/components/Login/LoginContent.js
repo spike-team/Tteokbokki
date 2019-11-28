@@ -31,7 +31,7 @@ const Login = () => {
             <p className="login-des">회원가입 기능은 선생님들께만 지원해드리는 기능입니다.<br />1학교 당 1계정으로 가입할 수 있습니다.</p>
 
             <div className="login-input">
-                <input className="login-subinput" type="email" value={email} onChange={onChangeEmail} placeholder="학교 이메일"/>
+                <input className="login-subinput" type="email" value={email} onChange={onChangeEmail} placeholder="학교 이메일 (@korea.kr)"/>
                 <p>* 이메일 형식을 맞춰서 적어주세요.</p>
             </div>
             <div className="login-input">
