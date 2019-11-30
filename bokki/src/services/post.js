@@ -14,7 +14,7 @@ export const signUp = async (email, password, school) => {
             "content-type": "application/json"
         }
     })  
-    console.log("성공");
+    console.log("회원가입 성공");
     return response.data; 
 };
 
@@ -29,6 +29,6 @@ export const signIn = async (email, password) => {
             "content-type": "application/json"
         }
     })
-    console.log("성공");
+    console.log("로그인 성공");
     return response.data; 
 };
