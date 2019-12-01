@@ -38,6 +38,10 @@ input:focus{
     border-radius: 10px;
 }
 
+input[type="text"] {
+    width: 330px;
+}
+
 input[type="password"] {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -68,13 +72,8 @@ input[type="password"]::placeholder {
     cursor: pointer;
 }
 
-.false {
-    visibility: hidden;
+.modal-btn {
     position: relative;
-    font-size: 15px;
-    margin: 10px;
-}
-
-.false {
-    color: #B90223;
+    margin-left: 10px;
+    cursor: pointer;
 }
