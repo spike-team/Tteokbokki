@@ -1,0 +1,13 @@
+.schoolItem > td {
+    padding: 6px;
+    font-size: 14px;
+}
+
+.school-name {
+    text-decoration: none;
+    color: black;
+}
+
+.school-name:hover {
+    text-decoration-line: underline;
+}
