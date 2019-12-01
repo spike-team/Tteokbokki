@@ -4,10 +4,13 @@ import Popup from "reactjs-popup";
 import './SchoolModal.css';
 import { searchSchool } from '../../services/get'
 import SchoolList from './SchoolList';
+// import SchoolList from './SchoolList';
 
 const SchoolModal = () => {
   
   const [search, setSearch] = useState("");
+  const [list, setList] = useState("");
+
   const onSearch = e => {
       setSearch(e.target.value);
   };
@@ -22,12 +25,10 @@ const SchoolModal = () => {
   }
 
   const makelist = (schools) => {
-    schools.then(function(schools) {
-     const school = schools.map((school) => (
-       console.log(school)
-      )
-    )
-  })}
+    schools.then(schools => {
+      setList(schools.map( school => ( <SchoolList name={school.name} fullName={school.fullName} schoolCode={school.schoolCode} /> )));
+    })
+  }
 
   return ( 
     <Popup trigger={<button className="modal-btn"> 학교 검색 </button>} modal>
@@ -41,20 +42,17 @@ const SchoolModal = () => {
 
         <table className="school-list" summary="학교 검색 후 학교 정보를 보여주는 표로, 학교명, 소속교육청을 포함한 학교명, 학교코드로 진행됩니다.">
           <thead>
-            <tr>
+            <tr className="list-header">
               <th>학교명</th>
               <th>소속교육청 포함 학교명</th>
               <th>학교코드</th>
             </tr>
           </thead>
+          <tbody>
+            {list}
+          </tbody>
         </table>
         </div>
-        <div className="actions">
-          <button className="button" onClick={() => {console.log("modal closed "); close(); }} >
-            close modal
-          </button>
-        </div>
-        
       </div>
     )}
     </Popup>
