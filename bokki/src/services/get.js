@@ -24,9 +24,9 @@ export const getManagerInfo = async ( accessToken = sessionStorage.getItem('acce
 };
 
 // 급식 불러오기
-export const getMeal = async (date, schoolCode) => {
-    const response = await axios.get(`${baseUrl}/meal?schoolCode=${schoolCode}&date=${date}`,{
-        params: { date, schoolCode },
+export const getMeal = async (schoolClass, schoolCode) => {
+    const response = await axios.get(`${baseUrl}/timetable/excel?schoolClass=${schoolClass}&schoolCode=${schoolCode}`,{
+        params: { schoolClass, schoolCode },
         headers: {
                 "content-type": "application/json"
         }
@@ -34,8 +34,8 @@ export const getMeal = async (date, schoolCode) => {
     return response.data;
 };
 
-//시간표 불러오기
-export const getTimetable = async (schoolCode) => {
+// 단일 학급 시간표 다운로드
+export const getTimetable = async (schoolClass, schoolCode) => {
     const response = await axios.get(`${baseUrl}/timetable?schoolCode=${schoolCode}`,{
         params: { schoolCode },
         headers: {
