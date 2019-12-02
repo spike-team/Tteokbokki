@@ -36,6 +36,17 @@ export const getMeal = async (schoolClass, schoolCode) => {
 
 // 단일 학급 시간표 다운로드
 export const getTimetable = async (schoolClass, schoolCode) => {
+    const response = await axios.get(`${baseUrl}/timetable?schoolClass=${schoolClass}&schoolCode=${schoolCode}`,{
+        params: { schoolClass, schoolCode },
+        headers: {
+                "content-type": "application/json"
+        }
+    });
+    return response.data;
+};
+
+// 전체 학급 시간표 다운로드
+export const getAllTimetable = async ( schoolCode) => {
     const response = await axios.get(`${baseUrl}/timetable?schoolCode=${schoolCode}`,{
         params: { schoolCode },
         headers: {
@@ -45,3 +56,13 @@ export const getTimetable = async (schoolClass, schoolCode) => {
     return response.data;
 };
 
+// 단일 학급 시간표 조회
+export const seeTimetable = async (schoolClass, schoolCode) => {
+    const response = await axios.get(`${baseUrl}/timetable?schoolCode=${schoolCode}`,{
+        params: { schoolClass, schoolCode },
+        headers: {
+                "content-type": "application/json"
+        }
+    });
+    return response.data;
+};
