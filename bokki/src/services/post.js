@@ -3,12 +3,12 @@ import axios from "axios";
 import { baseUrl } from "./endpoint";
 
 // 회원가입
-export const signUp = async (email, password, school) => {
+export const signUp = async (email, password,schoolCode) => {
     const response = await axios.post(
     `${baseUrl}/manager/signup`,{   
         "email": email, 
         "password": password,
-        "schoolCode": school
+        "schoolCode": schoolCode
     },{
         headers: {
             "content-type": "application/json"

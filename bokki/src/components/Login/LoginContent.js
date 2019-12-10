@@ -7,6 +7,7 @@ const Login = () => {
 
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+    const [status, setStatus] = useState(0);
     
     const onChangeEmail = e => {
         setEmail(e.target.value);
@@ -18,12 +19,19 @@ const Login = () => {
     const submitLoginInfo = async (email, password) => {
         try {
             let response = await signIn(email, password);
-            sessionStorage.setItem('access', response.data.access);
-            localStorage.setItem('refresh', response.data.refresh);
+            sessionStorage.setItem('accessToken', response.data.accessToken);
+            setStatus(200);
         } catch(error) {
             console.log(error.response);
         }
     };
+
+    if(status === 200) {
+        alert("로그인 성공");
+    }
+    if(status === 409) {
+        alert("존재하지 않는 이메일이나 틀린 비밀번호입니다.");
+    }
 
     return (
         <div className="login">
@@ -38,7 +46,7 @@ const Login = () => {
                 <input className="login-subinput" type="password" value={password} onChange={onChangePassword} placeholder="비밀번호"/>
                 <p>* 영어와 숫자를 혼합한 5글자 이상입니다.</p>
             </div>
-            <input className="login-submit" type="submit" onClick={() => submitLoginInfo(email, password)} value="학교 로그인"/>
+            <input className="login-submit" type="submit" onClick={() => setStatus(submitLoginInfo(email, password))} value="학교 로그인"/>
             <Link to='./register' href="" className="goauth"><span>StudenTable 에 가입하지 않은 학교인가요?</span></Link>
         </div>
     );
