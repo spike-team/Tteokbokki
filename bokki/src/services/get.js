@@ -35,7 +35,7 @@ export const getMeal = async (schoolClass, schoolCode) => {
 };
 
 // 단일 학급 시간표 다운로드
-export const getTimetable = async (schoolClass, schoolCode) => {
+export const downTimetable = async (schoolClass, schoolCode) => {
     const response = await axios.get(`${baseUrl}/timetable?schoolClass=${schoolClass}&schoolCode=${schoolCode}`,{
         params: { schoolClass, schoolCode },
         headers: {
@@ -46,7 +46,7 @@ export const getTimetable = async (schoolClass, schoolCode) => {
 };
 
 // 전체 학급 시간표 다운로드
-export const getAllTimetable = async ( schoolCode) => {
+export const downAllTimetable = async ( schoolCode) => {
     const response = await axios.get(`${baseUrl}/timetable?schoolCode=${schoolCode}`,{
         params: { schoolCode },
         headers: {

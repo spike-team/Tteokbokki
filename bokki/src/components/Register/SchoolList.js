@@ -3,13 +3,16 @@ import './SchoolList.css';
 
 import './SchoolModal';
 
-const SchoolList = ( school ) => {
+const SchoolList = ({setname, schoolCode, name, fullName} ) => {
 
-    const { name, fullName, schoolCode } = school;
+    const clickbtn = ( name, schoolCode) => {
+        setname(name);
+        sessionStorage.setItem("schoolCode", schoolCode);
+    }
 
     return (
-        <tr className="schoolItem">
-            <td><a className="school-name" href=""  >{name}</a></td>
+        <tr className="schoolItem"  onClick={()=>clickbtn( name, schoolCode )}>
+            <td><span className="school-name" >{name}</span></td>
             <td>{fullName}</td>
             <td>{schoolCode}</td>
         </tr>

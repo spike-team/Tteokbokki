@@ -38,7 +38,7 @@ input:focus{
     border-radius: 10px;
 }
 
-input[type="text"] {
+.schoolName {
     width: 330px;
 }
 
